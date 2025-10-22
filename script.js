@@ -10,7 +10,8 @@ async function getWeather() {
   }
 
   const apiKey = "38c96e34ef4b407fb8191208252210";
-  const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=yes`;
+  const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=yes`;
+
 
   try {
     const response = await fetch(url);
@@ -33,3 +34,4 @@ async function getWeather() {
     resultBox.innerHTML = `<p>❌ ${error.message}</p>`;
   }
 }
+
